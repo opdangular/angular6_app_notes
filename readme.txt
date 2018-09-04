@@ -115,6 +115,46 @@ non-structural directive
 ng-template
 ngStyle
 ngClass
+ng-content
+
+Angular tools
+------------------
+Augury chrome plugin
+Sources tab on developers tool
+
+custom property binding input and output events
+-----------------------------------------------------
+// without an alias
+@Input() element: { type: string, name: string, content: string};
+@Input('srvElement') element: { type: string, name: string, content: string};
+
+css behavior
+------------------
+angular restricts css to the component in which it is defined. this is opposite to default behavior of css
+
+view encaplusation in angular
+----------------------------------
+to disable view encapsulation add ViewEncapsulation.None in @Component 
+By disabling ViewEncapsulation in a Component, styles declared in that component's css are applied to other components
+We typically don't use this functionality
+
+two-way binding vs local reference
+---------------------------------------
+instead of using two-way binding [(ngModel)] = "propName" we can use local reference #propName when two-way binding is not required
+local reference refers to the entire element in which it is defined and is accessible in the whole template.
+
+
+two-way binding vs local reference defined as ElementRef
+----------------------------------------------------------
+@ViewChild('serverLocationInput') serverLocationInput: ElementRef;
+serverLocation: this.serverLocationInput.nativeElement.value
+
+
+
+
+
+
+
 
 
 
