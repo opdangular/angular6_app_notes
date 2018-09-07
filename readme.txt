@@ -149,6 +149,32 @@ two-way binding vs local reference defined as ElementRef
 @ViewChild('serverLocationInput') serverLocationInput: ElementRef;
 serverLocation: this.serverLocationInput.nativeElement.value
 
+Lifecycle hooks
+-----------------------
+ngOnChanges -> 
+may be called multiple times
+is invoked at start when a new component is created
+is invoked when any bound input property changes i.e. properties decorated with  @Input e.g. @Input('srvElement')
+
+ngOnInit ->
+is invoked when component is initialized
+will run after the constructor
+
+ngDoCheck ->
+is invoked when change detection runs
+change detection is a mechanism which detects when something changes in the component of a template
+Or whenever something changes inside of the component
+triggering events invoke ngDoCheck
+doesn't cost performance
+
+ngAfterContentInit 
+ngAfterContentChecked
+ngAfterViewInit
+ngAfterViewChecked
+ngOnDestroy
+
+
+
 
 
 
