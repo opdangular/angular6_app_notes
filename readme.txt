@@ -106,11 +106,12 @@ common directives
 
 structural directive (with a star) changing the DOM 
 -------------------------------------------------------
-*ngIf="serverCreated; else noServer"
+*ngIf="serverCreated; else noServer" -> this is used to add or remove element in DOM
 *ngFor
+We can't have more than one structural directive on one element
 
-non-structural directive
-----------------------
+attribute directive (affect the element they are added to)
+--------------------------------------------------------------
 [(ngModel)]="serverName"
 ng-template
 ngStyle
@@ -173,6 +174,12 @@ ngAfterViewInit
 ngAfterViewChecked
 ngOnDestroy
 
+
+More about Directives
+-----------------------
+it's better to use renderer than to modify DOM directly
+
+@HostListener
 
 
 
