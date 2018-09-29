@@ -85,7 +85,7 @@ index
 
 directive
 -------------
-are instructions in the DOM
+are instructions in the DOM; attribute and structural directive
 
 @Directive({
 	selector: '[appTurnGreen]'
@@ -178,8 +178,25 @@ ngOnDestroy
 More about Directives
 -----------------------
 it's better to use renderer than to modify DOM directly
+we can't add view related lifecycle hook functions to a directive because it doesn't have a view
 
 @HostListener
+
+creating a directive
+=====================
+
+ng generate directive <my-directive>
+ng g d <my-directive>
+
+How to manage events like mouse enter or exit
+==============================================
+
+use decorator @HostListener or @HostBinding
+
+creating our own structural directives
+=======================================
+
+
 
 
 
