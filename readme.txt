@@ -197,7 +197,31 @@ creating our own structural directives
 =======================================
 
 
+switch
+-------
 
+[ngSwitch] and *ngSwitchCase, *ngSwitchDefault
+
+
+Services
+-----------
+
+We shouldn't create service instances manually
+don't do this: 
+    const service = new LoggingService();
+    service.logStatusChange(accountStatus);
+    
+we should use providers (in @Component decorators) and constructor injectors
+
+Angular dependency injector is a hierarchical injector
+If we inject a service at the topmost level i.e. at AppModule then the same service instance is available to all the child components. If we inject a service in AppComponent instead, then the same service instance is available to all its child components, but the AppModule (the parent component) will not get the same service instance. 
+
+When we need to inject a service to another service then we should provide the service in AppModule 
+
+Services can be injected to other services by using @Injectable
+
+
+    
 
 
 
