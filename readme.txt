@@ -220,6 +220,39 @@ When we need to inject a service to another service then we should provide the s
 
 Services can be injected to other services by using @Injectable
 
+how do we make a copy of an array in Angular?
+----------------------------------------------
+arrayname.slice()
+
+routing
+-------
+How and where do we declare routes? In app.module.ts; it's of type Routes
+We need to make an entry under NgModule imports
+RouteModule.forRoot(appRoutes) // here appRoutes is an array of Routes we declared above
+
+special router selector
+-----------------------
+<router-outlet></router-outlet>
+
+while working with routers, we shouldn't use href in anchor tag as it reloads the page. instead we should use a special angular directive routerLink
+
+we can declare routerLink by following three ways:
+---------------------------------------------------
+
+routerLink="/mypath"
+[routerLink]="'/mypath'"
+[routerLink]="['/mypath', '/myadditionalpath']"
+
+how to show an active tab
+---------------------------
+in simple css we use class="active"
+
+in angular routing there is a special directive routerLinkActive
+also check routerLinkActiveOptions this is mainly used for home tab
+
+
+
+
 
     
 
