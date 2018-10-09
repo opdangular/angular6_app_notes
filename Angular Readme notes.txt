@@ -250,6 +250,17 @@ in simple css we use class="active"
 in angular routing there is a special directive routerLinkActive
 also check routerLinkActiveOptions this is mainly used for home tab
 
+------------------------ Ag Grid -----------------------
+
+installation 
+------------
+
+npm install --save ag-grid-community ag-grid-angular
+
+enabling enterprise version of agGrid
+---------------------------------------
+
+npm install --save ag-grid-enterprise
 
 
 
